@@ -2,4 +2,137 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+main {
+  height: 100vh;
+  background: #0f4d92;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100rem;
+  height: 60rem;
+  background: rgba(255, 255, 255, 0.778);
+  border-radius: 10px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.95);
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 9rem;
+  transition: all 0.75s;
+  text-align: center;
+}
+.player--active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.player--active .name {
+  font-weight: 700;
+}
+.player--active .score {
+  font-weight: 700;
+}
+.player--active .current {
+  opacity: 1;
+}
+.name {
+  position: relative;
+  font-size: 4rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 300;
+  word-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+.score {
+  font-size: 8rem;
+  color: #0f4d92;
+  margin-bottom: auto;
+}
+.current {
+  background: #0f4d92;
+  opacity: 0.8;
+  width: 65%;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.95);
+  color: #fff;
+  text-align: center;
+}
+.current-label {
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.current-score {
+  font-size: 3rem;
+}
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  color: #444;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0.7rem 2.5rem;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+.btn--new {
+  top: 14rem;
+}
+.btn--roll {
+  top: 52rem;
+}
+.btn--hold {
+  top: 60rem;
+}
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: none;
+}
+.btn::first-letter {
+  font-size: 2.4rem;
+  display: inline-block;
+  margin-right: 0.7rem;
+}
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 35rem;
+  transform: translateX(-50%);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
+  height: 10rem;
+}
+.player--winner {
+  background-color: #2f2f2f;
+}
+
+.player--winner .name {
+  font-weight: 700;
+  color: #c7365f;
+}
+
+.hidden {
+  display: none;
 }
